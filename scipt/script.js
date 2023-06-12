@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.overlay').fadeIn(); // Mostra l'overlay & text
+  $('.overlay').after('<div class="loader"></div>');
 
   $('.text-1').animate({opacity: 1}, 3000, function() {
     $('.text-2').fadeIn(3000, function() {
@@ -75,7 +76,7 @@ $(document).ready(function(){
 
     // Change the color
     if (bgDate == "green") {
-      $(":root").css("--primary-color", "#83e92e");
+      $(":root").css("--primary-color", "#7cca28");
       $(":root").css("--circle-1", "#8cd5589e");
       $(":root").css("--circle-2", "#6e8f1199");
       $(":root").css("--circle-3", "#98be2cad");
@@ -87,22 +88,22 @@ $(document).ready(function(){
       $(":root").css("--circle-2", "#b2afa6a6");
       $(":root").css("--circle-3", "#b69e8f8a");
       $(":root").css("--circle-4", "#a1a8a6ab");
-      $(".overlay").css("background", "rgba(165, 97, 76, 0.3)");
+      $(".overlay").css("background", "rgba(165, 97, 76, 0.07");
     } else if (bgDate == "blue") {
-      $(":root").css("--primary-color", "#2a6083");
-      $(":root").css("--circle-1", "#6193b4ad");
-      $(":root").css("--circle-2", "#6176b4ad");
-      $(":root").css("--circle-3", "#61b4b0ad");
+      $(":root").css("--primary-color", "#263772");
+      $(":root").css("--circle-1", "#60655a");
+      $(":root").css("--circle-2", "#7d868b");
+      $(":root").css("--circle-3", "#7e6442");
       $(":root").css("--circle-4", "#225250ad");
-      $(".overlay").css("background", "rgba(55, 74, 110, 0.41)");
+      $(".overlay").css("background", "none");
     
     } else if (bgDate == "light-blue") {
       $(":root").css("--primary-color", "#63cee7");
-      $(":root").css("--circle-1", "#5396a5ab");
-      $(":root").css("--circle-2", "#cabaab");
-      $(":root").css("--circle-3", "#83c7c79c");
-      $(":root").css("--circle-4", "#317ca1b5");
-      $(".overlay").css("background", "rgba(55, 74, 110, 0.41)");
+      $(":root").css("--circle-1", "#277392");
+      $(":root").css("--circle-2", "#8897a5");
+      $(":root").css("--circle-3", "##83c7c79c");
+      $(":root").css("--circle-4", "#326b83");
+      $(".overlay").css("background", "rgba(55, 74, 110, 0.07)");
     }
 
     // Change the music only if audio is playing
@@ -111,11 +112,21 @@ $(document).ready(function(){
     }
 
     // Change the video
+    // $("#background-video").fadeOut(function() {
+    //   $(this).attr("src", "./images/" + bgDate + ".mp4");
+    //   $(this).on("canplaythrough", function() {
+    //     $(this).fadeIn();
+    //     $(this).off("canplaythrough");
+    //   });
+    // });
+
     $("#background-video").fadeOut(function() {
+      $(".loader").fadeIn(); // Mostra l'animazione di caricamento
       $(this).attr("src", "./images/" + bgDate + ".mp4");
       $(this).on("canplaythrough", function() {
         $(this).fadeIn();
         $(this).off("canplaythrough");
+        $(".loader").fadeOut(); // Nascondi l'animazione di caricamento una volta che il video è pronto
       });
     });
   });
@@ -141,7 +152,10 @@ $(document).ready(function(){
     $(this).css("border", "1px solid var(--primary-color)");
     $(this).css("background", "var(--primary-color)");
     $(this).css("border-radius", "50%");
-    $(this).css("padding", "2px");
+    if ($(window).width() >= 991) {  
+      $(this).css("padding", "2px");
+}      
+   
   });
 
   $(".time").click(function() {
@@ -161,9 +175,9 @@ $(document).ready(function(){
       var timer = setInterval(function() {
         count--;
         if (count >= 0) {
-          $("#timer").text(count);
+          $(".timer-container").text(count);
         } else {
-          $("#timer").text("");
+          $(".timer-container").text("");
           $(".instruction").fadeIn();
           clearInterval(timer);
           // Timer completato, eseguire azioni aggiuntive qui
