@@ -17,22 +17,59 @@ $(document).ready(function(){
   $('.overlay').after('<div class="loader"></div>');
 
 
-  $('.text-1').animate({opacity: 1}, 3000, function() {
-    $('.text-2').fadeIn(3000, function() {
-      $('.text-2').animate({opacity: 1}, 2000, function() {
-        $('.text-3').fadeIn(2000, function() {
-          $('.text-3').animate({opacity: 1}, 1000, function() {
-            // $('.overlay').fadeOut(1000); 
-            $('.text-2, .text-1, .text-3').fadeOut(3000); 
-            $("nav").css("z-index", "104");
-            $(".sound-btn").css("z-index", "105");
+  // $('.text-1').animate({opacity: 1}, 3000, function() {
+  //   $('.text-2').fadeIn(3000, function() {
+  //     $('.text-2').animate({opacity: 1}, 2000, function() {
+  //       $('.text-3').fadeIn(2000, function() {
+  //         $('.text-3').animate({opacity: 1}, 1000, function() {
+  //           // $('.overlay').fadeOut(1000); 
+  //           $('.text-2, .text-1, .text-3').fadeOut(3000); 
+  //           $("nav").css("z-index", "104");
+  //           $(".sound-btn").css("z-index", "105");
           
-            $("nav, .sound-btn, .hamburger").css("opacity", "1");
-          });
-        });
-      });
+  //           $("nav, .sound-btn, .hamburger").css("opacity", "1");
+  //         });
+  //       });
+  //     });
+  //   });
+  // });
+
+  $('.text-1').css({
+    'opacity': 1,
+    'transition': 'opacity 3s'
+  });
+
+  $('.text-2').css({
+    'display': 'none',
+    'opacity': 0,
+    'transition': 'opacity 2s'
+  });
+
+  $('.text-3').css({
+    'display': 'none',
+    'opacity': 0,
+    'transition': 'opacity 1s'
+  });
+
+  $('.text-1').on('transitionend', function() {
+    $('.text-2').fadeIn(3000, function() {
+      $('.text-2').css('opacity', 1);
     });
   });
+
+  $('.text-2').on('transitionend', function() {
+    $('.text-3').fadeIn(2000, function() {
+      $('.text-3').css('opacity', 1);
+    });
+  });
+
+  $('.text-3').on('transitionend', function() {
+    $('.text-2, .text-1, .text-3').fadeOut(3000); 
+    $("nav").css("z-index", "104");
+    $(".sound-btn").css("z-index", "105");
+    $("nav, .sound-btn, .hamburger").css("opacity", "1");
+  });
+
 
 
   // menu
