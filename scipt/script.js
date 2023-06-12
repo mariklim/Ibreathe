@@ -101,7 +101,7 @@ $(document).ready(function(){
       $(":root").css("--primary-color", "#63cee7");
       $(":root").css("--circle-1", "#277392");
       $(":root").css("--circle-2", "#8897a5");
-      $(":root").css("--circle-3", "##83c7c79c");
+      $(":root").css("--circle-3", "#83c7c79c");
       $(":root").css("--circle-4", "#326b83");
       $(".overlay").css("background", "rgba(55, 74, 110, 0.07)");
     }
