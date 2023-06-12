@@ -441,7 +441,7 @@ justify-content: space-around; */
     font-size: 30px;
     z-index: 106;
     position: relative;
-    text-shadow: 4px 5px 5px #180e0e97;
+    /* text-shadow: 4px 5px 5px #180e0e97; */
 
     /* -webkit-text-stroke: 0.6px white;
     text-stroke: 1px white;
