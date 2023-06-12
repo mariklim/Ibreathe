@@ -1,14 +1,21 @@
+$(window).on("load", function() {
+  // Nascondi l'overlay di caricamento e l'animazione
+  $('.overlay, .loader').fadeOut(1000, function() {
+    // Mostra la pagina
+    $('body').css('visibility', 'visible');
+  });
+});
+
 $(document).ready(function(){
 
-  $(window).on("load", function() {
-    $('.loader').fadeOut(2000, function() {
-      $('.overlay').fadeOut(1000); 
-    });
-  });
-
   
-  $('.overlay').fadeIn(); // Mostra l'overlay & text
+  // Nascondi la pagina all'inizio
+  $('body').css('visibility', 'hidden');
+  
+  // Mostra l'overlay di caricamento e l'animazione
+  $('.overlay').fadeIn();
   $('.overlay').after('<div class="loader"></div>');
+
 
   $('.text-1').animate({opacity: 1}, 3000, function() {
     $('.text-2').fadeIn(3000, function() {
