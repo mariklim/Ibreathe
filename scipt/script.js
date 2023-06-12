@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+  $(window).on("load", function() {
+    $('.loader').fadeOut(2000, function() {
+      $('.overlay').fadeOut(1000); 
+    });
+  });
+
+  
   $('.overlay').fadeIn(); // Mostra l'overlay & text
   $('.overlay').after('<div class="loader"></div>');
 
