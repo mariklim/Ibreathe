@@ -463,18 +463,18 @@ justify-content: space-around; */
 
 
 .text-1, .text-2, .text-3{
-    opacity: 1;
+    opacity: 0;
     z-index: 103;
     user-select: none;
    
 }
-.text-1 {
+/* .text-1 {
     animation: loadText;
     animation-duration: 3s;
  
-}
+} */
 
-@keyframes loadText {
+/* @keyframes loadText {
 
     0% {
 
@@ -488,16 +488,16 @@ justify-content: space-around; */
 
 
     }
-}
+} */
 
-.text-2 {
+/* .text-2 {
 
     animation: loadText-2; 
     animation-delay: 4s;
     animation-duration: 3s; 
  
-}
-
+} */
+/* 
 @keyframes loadText-2 {
 
     0% {
@@ -512,9 +512,9 @@ justify-content: space-around; */
 
 
     }
-}
+} */
 
-.text-3 {
+/* .text-3 {
 
     animation: loadText-3; 
     animation-delay: 8s;
@@ -536,7 +536,7 @@ justify-content: space-around; */
 
 
     }
-}
+} */
 
 
 
