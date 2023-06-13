@@ -492,13 +492,13 @@ justify-content: space-around; */
     }
 }
 
-/* .text-2 {
+.text-2 {
 
     animation: loadText-2; 
     animation-delay: 4s;
     animation-duration: 3s; 
  
-} */
+}
 
 @keyframes loadText-2 {
 
@@ -516,13 +516,13 @@ justify-content: space-around; */
     }
 }
 
-/* .text-3 {
+.text-3 {
 
     animation: loadText-3; 
     animation-delay: 8s;
     animation-duration: 3s; 
   
-} */
+}
 
 @keyframes loadText-3 {
 
