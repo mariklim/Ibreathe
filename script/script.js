@@ -14,6 +14,7 @@ $(document).ready(function(){
             $("nav").css("z-index", "104");
             $(".sound-btn").css("z-index", "105");
           
+
             $("nav, .sound-btn, .hamburger").css("opacity", "1");
           });
         });
@@ -148,6 +149,7 @@ $(document).ready(function(){
     timeDate = $(this).data("time");
     if (timeDate > 0) {
       $(".btn-start").fadeIn();
+      $(".intro").css("display", "none")
     }
 
     $(".time").css("border", "none");
