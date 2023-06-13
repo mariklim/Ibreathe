@@ -1,9 +1,7 @@
 
-$(window).load(function() {
-	$(".loader").delay(2000).fadeOut("slow");
-  $(".overlay").delay(2000).fadeOut("slow");
-})
+
 $(document).ready(function() {
+
 
 
   // Aggiungi l'animazione della frase introduttiva
@@ -12,6 +10,8 @@ $(document).ready(function() {
     $(".sound-btn").css("z-index", "105");
 
     $("nav, .sound-btn, .hamburger").css("opacity", "1");
+
+
   });
 
 
