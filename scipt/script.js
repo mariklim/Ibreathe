@@ -1,20 +1,7 @@
-$(window).on("load", function() {
-  // Nascondi l'overlay di caricamento e l'animazione
-  $('.overlay, .loader').fadeOut(1000, function() {
-    // Mostra la pagina
-    $('body').css('visibility', 'visible');
-  });
-});
+
 
 $(document).ready(function(){
 
-  
-  // Nascondi la pagina all'inizio
-  $('body').css('visibility', 'hidden');
-  
-  // Mostra l'overlay di caricamento e l'animazione
-  $('.overlay').fadeIn();
-  $('.overlay').after('<div class="loader"></div>');
 
 
   $('.text-1').animate({opacity: 1}, 3000, function() {
@@ -34,23 +21,6 @@ $(document).ready(function(){
     });
   });
 
-  $('.text-1').animate({opacity: 1}, 3000, function() {
-    
-    $('.text-2').fadeIn(3000, function() {
-      $('.text-2').animate({opacity: 1}, 2000, function() {
-        $('.text-3').fadeIn(2000, function() {
-          $('.text-3').animate({opacity: 1}, 1000, function() {
-            // $('.overlay').fadeOut(1000); 
-            $('.text-2, .text-1, .text-3').fadeOut(3000); 
-            $("nav").css("z-index", "104");
-            $(".sound-btn").css("z-index", "105");
-          
-            $("nav, .sound-btn, .hamburger").css("opacity", "1");
-          });
-        });
-      });
-    });
-  });
 
 
 
