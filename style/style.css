@@ -456,17 +456,24 @@ justify-content: space-around; */
     text-align: center;
 }
 
-#timer {
+#timer, .text-1, .text-2, .text-3 {
   min-width: 300px;
+  min-height: 140px;
 }
 
-.text-1 {
-    position: relative;
-    animation: loadText;
-    animation-duration: 3s;
+
+.text-1, .text-2, .text-3{
     opacity: 1;
     z-index: 103;
     user-select: none;
+   
+}
+.text-1 {
+    position: relative;
+    display: none;
+    animation: loadText;
+    animation-duration: 3s;
+ 
 }
 
 @keyframes loadText {
@@ -485,16 +492,13 @@ justify-content: space-around; */
     }
 }
 
-.text-2 {
-    display: none;
-    position: relative;
-    /* animation: loadText-2; */
-    /* animation-delay: 4s;
-    animation-duration: 3s; */
-    opacity: 1;
-    z-index: 103;
-    user-select: none;
-}
+/* .text-2 {
+
+    animation: loadText-2; 
+    animation-delay: 4s;
+    animation-duration: 3s; 
+ 
+} */
 
 @keyframes loadText-2 {
 
@@ -512,16 +516,13 @@ justify-content: space-around; */
     }
 }
 
-.text-3 {
-    display: none;
-    position: relative;
-    /* animation: loadText-3; */
-    /* animation-delay: 8s;
-    animation-duration: 3s; */
-    opacity: 1;
-    z-index: 103;
-    user-select: none;
-}
+/* .text-3 {
+
+    animation: loadText-3; 
+    animation-delay: 8s;
+    animation-duration: 3s; 
+  
+} */
 
 @keyframes loadText-3 {
 
