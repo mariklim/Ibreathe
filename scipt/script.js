@@ -17,21 +17,13 @@ $(document).ready(function(){
   $('.overlay').after('<div class="loader"></div>');
 
 
-  $('.text-1').animate({opacity: 1}, 3000, function() {
-    $('.text-2').fadeIn(3000, function() {
-      $('.text-2').animate({opacity: 1}, 2000, function() {
-        $('.text-3').fadeIn(2000, function() {
-          $('.text-3').animate({opacity: 1}, 1000, function() {
-            // $('.overlay').fadeOut(1000); 
-            $('.text-2, .text-1, .text-3').fadeOut(3000); 
-            $("nav").css("z-index", "104");
-            $(".sound-btn").css("z-index", "105");
-          
-            $("nav, .sound-btn, .hamburger").css("opacity", "1");
-          });
-        });
-      });
-    });
+  $('.intro').animate({opacity: 1}, 4000, function() {
+    $('.intro').fadeOut(3000); 
+    $("nav").css("z-index", "104");
+    $(".sound-btn").css("z-index", "105");
+  
+    $("nav, .sound-btn, .hamburger").css("opacity", "1");
+
   });
 
   $('.text-1').animate({opacity: 1}, 3000, function() {
