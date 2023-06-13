@@ -1,18 +1,24 @@
+$(document).ready(function() {
+  // Nascondi la pagina all'inizio
+  $('body').css('visibility', 'hidden');
 
+  // Mostra l'overlay di caricamento e l'animazione
+  $('.overlay').fadeIn();
+  $('.overlay').after('<div class="loader"></div>');
 
-$(document).ready(function(){
-
-
+  // Aggiungi l'animazione della frase introduttiva
   $('.intro').animate({opacity: 1}, 3000, function() {
- 
     $("nav").css("z-index", "104");
     $(".sound-btn").css("z-index", "105");
-  
+
     $("nav, .sound-btn, .hamburger").css("opacity", "1");
 
+    // Nascondi l'overlay di caricamento e l'animazione
+    $('.overlay, .loader').fadeOut(1000, function() {
+      // Mostra la pagina
+      $('body').css('visibility', 'visible');
+    });
   });
-
-
 
 
   // menu
