@@ -1,6 +1,10 @@
 
 
 $(document).ready(function(){
+    // Mostra l'overlay di caricamento e l'animazione
+    $('.overlay').fadeIn();
+    $('.overlay').after('<div class="loader"></div>');
+  
 
 
 
