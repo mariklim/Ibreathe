@@ -1,10 +1,10 @@
-$(document).ready(function() {
-  // Nascondi la pagina all'inizio
-  $('body').css('visibility', 'hidden');
 
-  // Mostra l'overlay di caricamento e l'animazione
-  $('.overlay').fadeIn();
-  $('.overlay').after('<div class="loader"></div>');
+$(window).load(function() {
+	$(".loader").delay(2000).fadeOut("slow");
+  $(".overlay").delay(2000).fadeOut("slow");
+})
+$(document).ready(function() {
+
 
   // Aggiungi l'animazione della frase introduttiva
   $('.intro').animate({opacity: 1}, 3000, function() {
@@ -12,12 +12,6 @@ $(document).ready(function() {
     $(".sound-btn").css("z-index", "105");
 
     $("nav, .sound-btn, .hamburger").css("opacity", "1");
-
-    // Nascondi l'overlay di caricamento e l'animazione
-    $('.overlay, .loader').fadeOut(1000, function() {
-      // Mostra la pagina
-      $('body').css('visibility', 'visible');
-    });
   });
 
 
