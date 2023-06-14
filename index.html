@@ -6,57 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Breathe</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <meta property="og:image"
+        content="https://dynamic-og-image-generator.vercel.app//api/generate?title=Ibreathe 1.0&author=relax and breathe&avatar=https://mariklim.github.io/Ibreathe//images/buddha.png&websiteUrl=https://mariklim.github.io/Ibreathe/&theme=Dracula" />
+    <meta name="title" content="Ibreathe 1.0">
+    <meta name="description"
+        content="Discover tranquility and rejuvenation with our web app dedicated to breath and relaxation. Immerse yourself in soothing breathing exercises, guided meditations, and mindfulness practices. Achieve inner calm, manage stress, and improve well-being. Start your journey to serenity today.">
+    <meta name="keywords" content="breathe, relax, meditations, mindfulness">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Maria Klimenko">
+    <title>Ibreathe</title>
 </head>
 
 <div class="overlay"></div>
+
 <body>
 
 
 
- <main>
-    <div class="intro">
-        <div id="timer"> <span class="text-1">Relax</span> <br> 
-            <span class="text-2"> choose your favorite color <br> and set your own time in the menu on the <span class="text-dektop">right</span> <span class="text-mobile">bottom</span>
+    <main>
+        <div class="intro">
+            <div id="timer"> <span class="text-1">Relax</span> <br>
+                <span class="text-2"> choose your favorite color <br> and set your own time in the menu on the <span
+                        class="text-dektop">right</span> <span class="text-mobile">bottom</span>
 
-            </span> <br>
-             <span class="text-3"> and breathe </span>
-            
-            
-            
+                </span> <br>
+                <span class="text-3"> and breathe </span>
+
+
+
             </div>
 
-    </div>
+        </div>
 
-    <div class="close-toggle">
-        <button class="hamburger hamburger--active">
-            <span class="hamburger__line"></span>
-            <span class="hamburger__line"></span>
-            <span class="hamburger__line"></span>
-          </button>
-    </div>
-    <div class="sound-btn">
-    </div>
-    
-    <div class="btn-start">
-              
-    </div>
-    <div class="btn-reset">
-      
-    </div>
+        <div class="close-toggle">
+            <button class="hamburger hamburger--active">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+        <div class="sound-btn">
+        </div>
 
-    
-    <audio id="background-audio" src="./music/green.mp3" autoplay loop ></audio>
-    <video id="background-video" autoplay loop muted playsinline>
-        <source src="./images/default.mp4" type="video/mp4">
-        <!-- Aggiungi altre opzioni di formato del video qui se necessario -->
-    </video>
+        <div class="btn-start">
 
- 
-    <div class="container">
-        <div class="settings">
-        
-            <!-- <div id="timer"> <span class="text-1">Relax</span> <br> 
+        </div>
+        <div class="btn-reset">
+
+        </div>
+
+
+        <audio id="background-audio" src="./music/green.mp3" autoplay loop></audio>
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="./images/default.mp4" type="video/mp4">
+            <!-- Aggiungi altre opzioni di formato del video qui se necessario -->
+        </video>
+
+
+        <div class="container">
+            <div class="settings">
+
+                <!-- <div id="timer"> <span class="text-1">Relax</span> <br> 
                 <span class="text-2"> choose your favorite color <br> and set your own time in the menu on the <span class="text-dektop">right</span> <span class="text-mobile">bottom</span>
 
                 </span> <br>
@@ -65,44 +78,44 @@
                 
                 
                 </div> -->
-        </div>
-
-        <div class="circle">
-            <div class="timer-container">
-              1  
-            </div>
-            <div class="instruction">
-
             </div>
 
+            <div class="circle">
+                <div class="timer-container">
+                    1
+                </div>
+                <div class="instruction">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+    <nav>
+
+
+
+        <div class="ambient-menu">
+            <div data-ambient="green" class="ambient"></div>
+            <div data-ambient="pink" class="ambient"></div>
+            <div data-ambient="blue" class="ambient"></div>
+            <div data-ambient="light-blue" class="ambient"></div>
         </div>
 
+        <div class="time-containr">
+            <div data-time="12" class="time">
+                <img src="./images/buddha.png" alt="1 min">
+            </div>
+            <div data-time="36" class="time"><img src="./images/buddha.png" alt="3 min"></div>
+            <div data-time="60" class="time"><img src="./images/buddha.png" alt="5 min"></div>
+            <div data-time="120" class="time"><img src="./images/buddha.png" alt="10 min"></div>
+        </div>
 
-
-    </div>
-</main>
-
-<nav>
-
-    
-
-     <div class="ambient-menu">
-         <div data-ambient="green" class="ambient"></div>
-         <div data-ambient="pink" class="ambient"></div>
-         <div data-ambient="blue" class="ambient"></div>
-         <div data-ambient="light-blue" class="ambient"></div>
-     </div>
-
-     <div class="time-containr">
-         <div data-time="12" class="time">
-             <img src="./images/buddha.png" alt="1 min">
-         </div>
-         <div data-time="36" class="time"><img src="./images/buddha.png" alt="3 min"></div>
-         <div data-time="60" class="time"><img src="./images/buddha.png" alt="5 min"></div>
-         <div data-time="120" class="time"><img src="./images/buddha.png" alt="10 min"></div>
-     </div>
-
-</nav>
+    </nav>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
